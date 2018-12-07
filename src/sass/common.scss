@@ -1,0 +1,5 @@
+// 适配参数
+@function rem($val){
+	@return $val/37.5+rem
+}
+

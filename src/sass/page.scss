@@ -1,0 +1,67 @@
+@import './common.scss';
+
+html,body{
+    height: 100%;
+}
+
+.App{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    #Header{
+        width: 100%;
+        height: rem(43);
+        z-index: 100;
+        .header{
+            width: 100%;
+            height: rem(43);
+            position: fixed;
+            background: white;
+            top: 0;
+            left: 0;
+            font-size: rem(18);
+            line-height: rem(43);
+            display: flex;
+            .title{
+                flex: 9;
+                text-align: center;
+                margin-left: rem(20);
+            }
+            .right{
+                flex: 1;
+                color:rgb(175, 169, 169);
+                text-align: center;
+            }
+        }
+    }
+
+    #content{
+        width: 100%;
+        height: auto;
+        .content{
+            width: 100%;
+            height: auto;
+            overflow-y: auto;
+        }
+    }
+
+    #Tabbar{
+        height: rem(50); 
+        width: 100%;
+        .Tabbar{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            width: 100%;
+            .icon_size{
+                width: rem(16);
+                height: rem(16);
+            }
+        }
+    }
+
+}
+
+

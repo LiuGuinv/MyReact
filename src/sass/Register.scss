@@ -1,0 +1,72 @@
+@import './common.scss';
+
+#reg{
+    width: 100%;
+    height: auto;
+    .reg_header{
+        width: 100%;
+        height: rem(43);
+        background: #fff;
+        border-bottom: 1px solid #C8C8C8;
+        display: flex;
+        padding: 0 rem(10);
+        a{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #275599;
+        }
+        .reg_icons{
+            font-size: rem(20);
+        }
+        h6{
+            flex: 7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: rem(18);
+        }
+        .isComfirm{
+            font-size: rem(14);
+        }
+    }
+
+    .reg_info{
+        width: 100%;
+        height: auto;
+        margin-top: rem(20);
+        .am-list .am-list-body{
+            width: 100%;
+            height: rem(132);
+        }
+        .am-list-item .am-input-label{
+            font-size: rem(14);
+        }
+        .am-list-item .am-input-control input{
+            font-size: rem(14);
+        }
+        .am-list-item.am-input-item {
+            height: rem(44);
+            padding-left: rem(15);
+        }
+
+        .reg_btn{
+            width: 100%;
+            height: rem(40);
+            text-align: center;
+            margin-top: rem(20);
+            button{
+                width: 85%;
+                height: 100%;
+                text-align: center;
+                background: #275599;
+                color: #fff;
+                font-size: rem(16);
+                border-radius: rem(5);
+            }
+        }
+
+    }
+
+}

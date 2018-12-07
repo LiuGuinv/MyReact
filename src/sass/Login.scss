@@ -1,0 +1,83 @@
+@import './common.scss';
+
+#login_container{
+    width: 100%;
+    height: auto;
+    .login_header{
+        width: 100%;
+        height: rem(43);
+        background: #fff;
+        border-bottom: 1px solid #D0D0D0;
+        display: flex;
+        padding: rem(10) rem(10);
+        text-align: center;
+        a{
+            flex: 1;
+            font-size: rem(16);
+        }
+        h6{
+            flex: 7;
+            font-size: rem(18);
+        }
+        .goto_home{
+            color: #888;
+        }
+        .reg_btn{
+            color: #0E5AA0;
+        }
+    }
+    .login_info{
+        width: 100%;
+        height: rem(190);
+        .am-list .am-list-body{
+            width: 100%;
+            height: rem(88);
+        }
+        .am-list-item .am-input-label{
+            font-size: rem(14);
+        }
+        .am-list-item .am-input-control input{
+            font-size: rem(14);
+        }
+        .am-list-item.am-input-item {
+            height: rem(44);
+            padding-left: rem(15);
+        }
+
+        .remember_form{
+            width: 100%;
+            height: rem(40);
+            padding: rem(15) rem(20) 0 rem(20);
+            input{
+                width: rem(14);
+                height: rem(14);
+            }
+            span{
+                font-size: rem(14);
+                margin-left: rem(6);
+            }
+            .forget_password{
+                font-size: rem(14);
+                color: #0E5AA0;
+                float: right;
+            }
+        }
+        
+        .log_btn{
+            width: 100%;
+            height: rem(40);
+            text-align: center;
+            button{
+                width: 85%;
+                height: 100%;
+                text-align: center;
+                background: #EEE;
+                color: #888;
+                font-size: rem(16);
+                border-radius: rem(5);
+                margin-top: rem(15);
+            }
+        }
+
+    }
+}
