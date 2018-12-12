@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 // 引入react-redux的connect方法
 import {connect} from 'react-redux';
 
+import axios from 'axios';
+
 //引入React-router
 import {Route,NavLink,Redirect,Switch,withRouter} from 'react-router-dom';
 
@@ -36,6 +38,8 @@ import {
 
 library.add(faHome,faBars,faShoppingCart,faUser )
 
+// 默认请求数据的url
+axios.defaults.baseURL="http://127.0.0.1:8009";
 
 class App extends Component{
   constructor() {

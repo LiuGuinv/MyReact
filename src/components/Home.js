@@ -23,7 +23,6 @@ import {faSearch,faBell} from '@fortawesome/free-solid-svg-icons';
 
 library.add(faSearch,faBell)
 
-
 class Home extends Component{
     constructor(){
         super();

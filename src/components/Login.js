@@ -3,6 +3,8 @@ import React,{Component} from 'react';
 // 引入样式
 import '../sass/Login.scss';
 
+import axios from 'axios';
+
 import {List, InputItem} from 'antd-mobile';
 
 import {withRouter} from 'react-router-dom';
@@ -41,6 +43,25 @@ class Login extends Component{
         this.props.history.push(path)
     }
 
+    // 点击登录
+    handlerComfirmLogin(){
+        let log_name = document.querySelectorAll("#login_container .login_info .am-list-item .am-input-control input")[0].value;
+        let log_pass = document.querySelectorAll("#login_container .login_info .am-list-item .am-input-control input")[1].value;
+        // console.log(log_name)
+        axios.post('/userapi/user/login', {
+            usname: log_name,
+            uspass: log_pass
+        })
+        .then((res)=>{
+            // console.log(res)
+            alert(res.data)
+        })
+        .catch((error)=>{
+            // console.log(error.data)
+            alert(error.data)
+        })
+    }
+
     render(){
         let path1 = '/home';
         let path2 = '/register';
@@ -76,7 +97,7 @@ class Login extends Component{
                         </div>
 
                         <div className="log_btn">
-                            <button>登录</button>
+                            <button onClick={this.handlerComfirmLogin.bind(this)}>登录</button>
                         </div>
 
                     </div>

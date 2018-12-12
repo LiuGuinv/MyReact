@@ -3,8 +3,9 @@ import React,{Component} from 'react';
 import '../sass/Register.scss';
 
 import {List, InputItem} from 'antd-mobile';
-
 import {withRouter} from 'react-router-dom';
+
+import axios from 'axios';
 
 // 引入
 import {connect} from 'react-redux';
@@ -18,9 +19,7 @@ import {faChevronLeft} from '@fortawesome/free-solid-svg-icons';
 
 library.add(faChevronLeft)
 
-
 class Register extends Component{
-
     componentDidMount(){
 		this.props.changeheaderStatus({headerStatus:false,headerTitle:""});
         this.props.changeTabbarStatus(false);
@@ -33,6 +32,30 @@ class Register extends Component{
 
     handlerGotoback(){
         window.history.back()
+    }
+
+    // 点击注册时
+    handlerComfirmReg(){
+        let usrnickname = document.querySelectorAll("#reg .reg_info .am-list-item .am-input-control input")[0].value;
+        let phone = document.querySelectorAll("#reg .reg_info .am-list-item .am-input-control input")[1].value;
+        let password = document.querySelectorAll("#reg .reg_info .am-list-item .am-input-control input")[2].value;
+        // console.log(typeof(phone));
+        // 去掉号码里的空格
+        let newphone = phone.replace(/\s*/g,"");
+        // console.log(newphone);
+        axios.post('/userapi/user/register', {
+            nickname: usrnickname,
+            usname: newphone,
+            uspass: password
+        })
+        .then((res)=>{
+            // console.log(res)
+            alert(res.data)
+        })
+        .catch((error)=>{
+            // console.log(error)
+            alert(error.data)
+        })
     }
 
     render(){
@@ -69,7 +92,7 @@ class Register extends Component{
                         </List>
 
                         <div className="reg_btn">
-                            <button>注册</button>
+                            <button onClick={this.handlerComfirmReg.bind(this)}>注册</button>
                         </div>
                 </div>
 

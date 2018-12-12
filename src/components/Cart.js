@@ -23,7 +23,7 @@ class Cart extends Component{
     }
 
     componentWillMount(){
-        console.log('cart_listinfo:',this.props);
+        // console.log('cart_listinfo:',this.props);
         // let {goodslist} = this.props.match;
 
         // 判断是否传入商品

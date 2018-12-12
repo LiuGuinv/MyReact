@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 
-// 引入axios用于请求数据 安装：npm install axios --save
-// import axios from 'axios';
+// 引入右边组件
+import {ClassifyRight} from './ClassifyRight';
 
 // 引入
 import {connect} from 'react-redux';
@@ -13,9 +13,7 @@ class Classify extends Component{
     constructor(){
         super();
         this.state={
-            ullist:[
-                '品牌推荐','家具','硬装','卫浴','儿童家具','主材包'
-            ],
+            ullist:['品牌推荐','家具','硬装','卫浴','儿童家具','主材包'],
             // 默认索引
             currentLi:0
         }
@@ -26,14 +24,7 @@ class Classify extends Component{
         this.setState({
             currentLi:index
         })
-        // console.log(111)
     }
-
-    // componentWillMount(){
-    //     this.setState({
-    //         currentLi:0
-    //     })
-    // }
 
     componentDidMount(){
         this.props.changeheaderStatus({headerStatus:true,headerTitle:"分类"});
@@ -55,7 +46,7 @@ class Classify extends Component{
                 </div>
                 
                 <div className="class_right">
-                    
+                    <ClassifyRight />
                 </div>
         </div>)
     }
